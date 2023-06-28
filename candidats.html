@@ -1,0 +1,109 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les candidats</title>
+  <link rel="shortcut icon" type="images/png" href="Images/logoOEC.png">
+  <link rel="stylesheet" href="candidats.css">
+</head>
+<body>
+  <section class="page">
+    <!-- Barre de navigation -->
+    <nav>
+      <div class="onglets">
+        <a onclick="window.location.href='index.html';">Accueil</a>
+        <a onclick="window.location.href='candidats.html';"><b>Les Candidats</b></a>
+        <a onclick="window.location.href='projet.html';">Le Projet</a>
+        <a onclick="window.location.href='temperature_humidite.html';">Température/Humidité</a>
+      </div>
+
+		<p id="date-heure"></p>
+		
+      <div class="buttons">
+        <!--<button class="login" onclick="window.location.href='login.html';">J'ai déjà un compte</button>-->
+        <button class="register" onclick="window.location.href='login.html';">Connexion</button>
+
+      </div>
+
+    </nav>
+    <script>
+      function afficherDateHeure() {
+        var date = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+        var dateHeure = date.toLocaleDateString('fr-FR', options);
+        document.getElementById("date-heure").innerHTML = dateHeure;
+      }
+      afficherDateHeure();
+      setInterval(afficherDateHeure, 1000); // mettre à jour la date et l'heure toutes les secondes
+    </script>
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Header -->
+    <header>
+      <h1>Présentation des candidats</h1>
+    </header>
+    <!-- Fin du header -->
+    <h3>Vous trouverez ci-dessous la présentation du binôme qui a fait ce site ainsi que le projet.</h3>
+    <div id="col">
+    <p>
+    <p>Le premier membre du binôme est:</p>
+    <p><b>Julien:</b><br>
+    - Cursus actuel:
+    <ul><li>	Actuellement en BTS Système du Numérique option Informatique et Réseau</li></ul></p>
+    <p>- Année Antérieure:<br>
+    <ul><li> Julien était l'annnée dernière en BAC Général option Mathématiques et Numérique et Science de l'Informatique.</li></ul></p>
+    <p>- Projet Professionnel:<br>
+    <ul><li> Julien a pour objectif de rentrer dans la vie active après son BTS ou de faire un an de plus pour obtenir une licence en alternance.</li></ul></p>
+    </p>
+    
+    <p>
+    <p><br>Le deuxième membres du binôme est:</p>
+    <p><b>Logan:</b><br>
+    - Cursus actuel:
+    <ul><li>	Actuellement en BTS Système du Numérique option Informatique et Réseau</li></ul></p>
+    <p>- Année Antérieure:<br>
+    <ul><li> Logan était l'annnée dernière en BAC Général option Mathématiques et Sciences de l'Ingénieur.</li></ul></p>
+    <p>- Projet Professionnel:<br>
+    <ul><li> Logan a pour objectif de faire une licence après son BTS.</li></ul></p>
+    </p>
+    </div>
+    <!-- Informations -->
+    
+    <!-- Fin des informations -->
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+      <h5>Des questions ? Un problème ?<br>→ Envoyez un mail à <a href="mailto:julien.foy@student-oec.fr">julien.foy@student-oec.fr</a>.</h5>
+      <!--<div class="colonnes">
+        <div class="colonne">
+          <p>Relations clients</p>
+          <p>Relations Investisseurs</p>
+          <p>Modes de lecture</p>
+          <p>Mentions légales</p>
+        </div>
+        <div class="colonne">
+          <p>Centre d'aide</p>
+          <p>Les meilleurs graphistes</p>
+          <p>Entreprise mondiale</p>
+          <p>Chiffre d'affaire</p>
+          <p>Les meilleurs peintres</p>
+        </div>
+        <div class="colonne">
+          <p>FAQ</p>
+          <p>Recrutement</p>
+          <p>Conditions d'utilisation</p>
+          <p>Nous contacter</p>
+        </div>
+        <div class="colonne">
+          <p>Compte</p>
+          <p>S'enregistrer</p>
+          <p>Se connecter</p>
+          <p>Nous contacter</p>
+        </div>
+      </div>-->
+      <p>©Julien FOY</p>
+    </footer>
+  <!-- Fin du pied de page -->
+</body>
+</html>

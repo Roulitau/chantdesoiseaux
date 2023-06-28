@@ -1,0 +1,91 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Température/Humidité</title>
+  <link rel="shortcut icon" type="images/png" href="Images/logoOEC.png">
+  <link rel="stylesheet" href="temperature_humidite.css">
+</head>
+<body>
+  <section class="page">
+    <!-- Barre de navigation -->
+    <nav>
+      <div class="onglets">
+        <a onclick="window.location.href='index.html';">Accueil</a>
+        <a onclick="window.location.href='candidats.html';">Les Candidats</a>
+        <a onclick="window.location.href='projet.html';">Le Projet</a>
+        <a onclick="window.location.href='temperature_humidite.html';">Température/Humidité</a>
+      </div>
+
+		<p id="date-heure"></p>
+		
+      <div class="buttons">
+        <!--<button class="login" onclick="window.location.href='login.html';">J'ai déjà un compte</button>-->
+        <button class="register" onclick="window.location.href='login.html';">Connexion</button>
+
+      </div>
+
+    </nav>
+    <script>
+      function afficherDateHeure() {
+        var date = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+        var dateHeure = date.toLocaleDateString('fr-FR', options);
+        document.getElementById("date-heure").innerHTML = dateHeure;
+      }
+      afficherDateHeure();
+      setInterval(afficherDateHeure, 1000); // mettre à jour la date et l'heure toutes les secondes
+    </script>
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Header -->
+    <header>
+      <h1>Présentation du projet</h1>
+    </header>
+    <!-- Fin du header -->
+    
+    <h3>Vous trouverez ci-dessous la Température et l'Humidité de la pièce ou ce trouver le SHT-C3.</h3>
+    <p>Température:</p>
+    <ul><li>... °C</li></ul></p>
+    <p>Humidité:</p>
+    <ul><li>... %</li></ul></p>
+    <!-- Informations -->
+    
+    <!-- Fin des informations -->
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+      <h5>Des questions ? <br>→ Envoyez un mail à <a href="mailto:julien.foy@student-oec.fr">julien.foy@student-oec.fr</a></h5>
+      <!--<div class="colonnes">
+        <div class="colonne">
+          <p>Relations clients</p>
+          <p>Relations Investisseurs</p>
+          <p>Modes de lecture</p>
+          <p>Mentions légales</p>
+        </div>
+        <div class="colonne">
+          <p>Centre d'aide</p>
+          <p>Les meilleurs graphistes</p>
+          <p>Entreprise mondiale</p>
+          <p>Chiffre d'affaire</p>
+          <p>Les meilleurs peintres</p>
+        </div>
+        <div class="colonne">
+          <p>FAQ</p>
+          <p>Recrutement</p>
+          <p>Conditions d'utilisation</p>
+          <p>Nous contacter</p>
+        </div>
+        <div class="colonne">
+          <p>Compte</p>
+          <p>S'enregistrer</p>
+          <p>Se connecter</p>
+          <p>Nous contacter</p>
+        </div>
+      </div>-->
+      <p>©Julien FOY</p>
+    </footer>
+  <!-- Fin du pied de page -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le projet</title>
+  <link rel="shortcut icon" type="images/png" href="Images/logoOEC.png">
+  <link rel="stylesheet" href="projet.css">
+</head>
+<body>
+  <section class="page">
+    <!-- Barre de navigation -->
+    <nav>
+      <div class="onglets">
+        <a onclick="window.location.href='index.html';">Accueil</a>
+        <a onclick="window.location.href='candidats.html';">Les Candidats</a>
+        <a onclick="window.location.href='projet.html';">Le Projet</a>
+        <a onclick="window.location.href='temperature_humidite.html';">Température/Humidité</a>
+      </div>
+
+		<p id="date-heure"></p>
+		
+      <div class="buttons">
+        <!--<button class="login" onclick="window.location.href='login.html';">J'ai déjà un compte</button>-->
+        <button class="register" onclick="window.location.href='login.html';">Connexion</button>
+
+      </div>
+
+    </nav>
+    <script>
+      function afficherDateHeure() {
+        var date = new Date();
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+        var dateHeure = date.toLocaleDateString('fr-FR', options);
+        document.getElementById("date-heure").innerHTML = dateHeure;
+      }
+      afficherDateHeure();
+      setInterval(afficherDateHeure, 1000); // mettre à jour la date et l'heure toutes les secondes
+    </script>
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Header -->
+    <header>
+      <h1>Présentation du projet</h1>
+    </header>
+    <!-- Fin du header -->
+    
+    <h3>Vous trouverez ci-dessous la présentation du projet MTHR réalisé par les candidats.</h3>
+    <p><b>Présentation du projet:</b></p>
+    <p>Le projet <b>MTHR</b> (<b>M</b>esures <b>T</b>empératures et <b>H</b>umidité <b>R</b>elative) a pour but d’ installer,
+	d’analyser et de contrôler un micro composant SHT-C3. Le composant nous sera fourni intégré dans
+	un module Ada Fruit, afin de capté la température T° ainsi que l’humidité relative HR % dans une
+	pièce ; pour pouvoir mettre en route un ventilateur ou une Résistance chauffante. Pour réguler la
+	température et l’humidité d’une pièce à l’aide d’un Thermostat et de son logiciel.<br>
+    <ul><li>	Matériel utilisé:</li></ul></p>
+   <main>
+   <p>- Capteur de température et humidité (SHT-C3) avec son module Ada Fruit ainsi que les câbles connexions :</p>
+	<img src="Images/shtc3.jpg"
+			width="341"
+    		height="341">
+    </main>
+    <!-- Informations -->
+    
+    <!-- Fin des informations -->
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+      <h5>Des questions ? <br>→ Envoyez un mail à <a href="mailto:julien.foy@student-oec.fr">julien.foy@student-oec.fr</a>.</h5>
+      <!--<div class="colonnes">
+        <div class="colonne">
+          <p>Relations clients</p>
+          <p>Relations Investisseurs</p>
+          <p>Modes de lecture</p>
+          <p>Mentions légales</p>
+        </div>
+        <div class="colonne">
+          <p>Centre d'aide</p>
+          <p>Les meilleurs graphistes</p>
+          <p>Entreprise mondiale</p>
+          <p>Chiffre d'affaire</p>
+          <p>Les meilleurs peintres</p>
+        </div>
+        <div class="colonne">
+          <p>FAQ</p>
+          <p>Recrutement</p>
+          <p>Conditions d'utilisation</p>
+          <p>Nous contacter</p>
+        </div>
+        <div class="colonne">
+          <p>Compte</p>
+          <p>S'enregistrer</p>
+          <p>Se connecter</p>
+          <p>Nous contacter</p>
+        </div>
+      </div>-->
+      <p>©Julien FOY</p>
+    </footer>
+  <!-- Fin du pied de page -->
+</body>
+</html>
